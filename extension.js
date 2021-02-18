@@ -24,7 +24,23 @@ function activate(context) {
 		vscode.window.showInformationMessage('Hello World from user-status!');
 	});
 
+	let testCommand = vscode.commands.registerCommand('user-status.mlh', function () {
+		// The code you place here will be executed every time your command is executed
+
+		// Display a message box to the user
+		vscode.window.showInformationMessage('Hello Daniel, William and Samuel. Welcome to MLH !');
+	});
+
+	let showUpMessage = vscode.commands.registerCommand('user-status.showup', function () {
+		// The code you place here will be executed every time your command is executed
+
+		// Display a message box to the user
+		vscode.window.showInformationMessage('This is just a reminder to let you know that we are learning something new');
+	});
+
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(testCommand);
+	context.subscriptions.push(showUpMessage);
 }
 
 // this method is called when your extension is deactivated
